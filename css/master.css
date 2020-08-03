@@ -1,0 +1,106 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+}
+
+main {
+  position: relative;
+  top: 0;
+}
+
+.content-one {
+  /* width: 100%; */
+  border: 1px solid black;
+
+}
+
+.content-portada {
+  position: relative;
+  background-position: center center;
+  background-image: url("../images/fondo2.jpg");
+  background-size: cover;
+  height: 100vh;
+  align-items: center;
+  display: flex;
+}
+
+.content-titulo {
+  padding: 100px;
+  position: relative;
+  /* top: 10px; */
+  /* centrar */
+
+}
+
+.content-titulo h2,
+.content-titulo h3 {
+  color: white;
+  font-weight: 100;
+}
+
+.content-titulo h2 {
+  font-size: 60px;
+}
+
+.content-titulo h3 {
+  font-size: 45px;
+}
+
+.content-portada a {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 5px;
+  border-radius: 2px;
+  background-color: #006a71;
+  color: #ffffdd;
+  text-decoration: none;
+  
+
+}
+
+.content-portada a:hover {
+  color: #d3de32;
+}
+/* Fin de portada */
+
+.content-two {
+  /* width: 100%; */
+  padding: 40px;
+  background-color: rgb(245, 245, 245);
+}
+
+.content-details {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: rgb(37, 37, 37);
+}
+
+.about {
+  width: 90%;
+  margin: auto;
+  padding: 40px;
+  text-align: justify;
+}
+
+.about h2 {
+  font-size: 72px;
+  font-weight: 700;
+  padding-bottom: 25px;
+  line-height: 80px;
+}
+
+.about p {
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 0;
+  margin-top: 25px;
+}
+
+.content-three {
+  margin: 40px;
+}
