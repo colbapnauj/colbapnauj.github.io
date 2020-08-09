@@ -6,195 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/master.css">
 
-    <!-- Vue -->
-    <!-- versión de desarrollo, incluye advertencias de ayuda en la consola -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
-    <!-- Botstrap 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
-    -->
-    <title>Jean Chiclla</title>
+
+    <title>Jean Chiclla | Front-End</title>
 </head>
 
 <body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="" class="navbar-brand">Jean Chiclla</a>
+
+            <ul class="navbar-nav">
+                <li class="nav-item"><input type="color" name="color" id="muestrario"></li>
+                <li class="nav-item"><a href="#" class="nav-link nav-item-active" onclick="navItemActive(event)">About</a></li>
+                <!-- <li class="nav-item"><a href="#" class="nav-link" onclick="navItemActive(event)">Blog</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" onclick="navItemActive(event)">Skills</a></li> -->
+            </ul>
+        </div>
+    </nav>
 
 
     <main>
 
-        <div class="content-one" id="inicio">
-            <div class="content-portada">
-                <div class="content-titulo">
-                    <h2>Jean Chiclla</h1>
-                        <h3>Desarrollador web</h3>
-                </div>
-                <a href='https://www.freepik.es/vectores/fondo' target="_blank">Vector de Fondo creado por pikisuperstar
-                    - www.freepik.es</a>
+        <div class="content__one" id="inicio">
+            <div class="content__one-portada">
+                <h2>Jean Chiclla</h2><br>
+                <h3>Estoy aprendiendo Desarrollo web!</h3>
             </div>
         </div>
 
-        <div class="content-two" id="sobre-mi">
-            <div class="content-details">
-                <div class="about">
-                    <h2>Sobre mí</h2>
-                    <!-- podría agregar íconos sobre mi experiencia -->>
-                    <p>A los 17 años comencé a trabajar como mozo en un restaurante por la
-                        calle mercaderes. Me gusta prestar ese servicio (atender a las
-                        personas). La organización y los procesos del restaurante me
-                        llevaron a estudiar administración de empresas. <br>
-                        Pero, desde mucho antes estuvo en mí esa curiosidad por desarmar cosas
-                        y aprender como funcionaban. Aprendí la lógica de la programación
-                        cuando tuve la oportunidad de estudiar una carrera corta de computación
-                        cuando entré a primero de secundaria (La carrera contenía cursos de
-                        ofimática, diseño gráfico, programación básica y de gestión como
-                        contabilidad). <br>
-                        Por mucho tiempo evité el camino relacionado específicamente a lo
-                        tecnológico. El problema es que sentí miedo de descubir que tal
-                        vez no sería bueno. Pero, saben? Eso me quita el sueño. También
-                        me frusta, justo como ahora. No he sido de poner en práctica lo
-                        aprendido. O de ir por todo en algo. <br>
-                        Ahora si lo haré. Porque esta vez seré valiente y avanzaré para por
-                        fin descubrir si esto que me quita el sueño es para mí.
-                    </p>
-                </div>
+        <div class="content__two" id="sobre-mi">
+            <div class="content__two-about-me">
+                <span>[jean@archlinux ~]$ </span>
+                <p style="display: inline-block;">./sobre_mi.sh</p>
+                <p>A los 17 años comencé a trabajar como mozo en un restaurante por la
+                    calle mercaderes. Su organización y procesos me
+                    llevaron a estudiar administración de empresas. 
+                    Pero, desde mucho antes estuvo en mí esa curiosidad por desarmar cosas
+                    y aprender como funcionan. <br><br>
+                    Cuando entré a primero de secundaria tuve la oportunidad de estudiar una carrera corta de computación 
+                    (La carrera contenía cursos de ofimática, diseño gráfico, 
+                    programación básica y de gestión).<br>
+                     <br>
+                    Por mucho tiempo evité el camino relacionado específicamente a lo
+                    tecnológico. El problema es que sentí miedo de descubir que tal
+                    vez no sería bueno. Pero, saben? Eso me quita el sueño.
+
+                </p>
             </div>
         </div>
 
-        <div class="content-three">
-            <div id="app">
-                {{ message }}
-            </div>
-            <div id="app-2">
-                <span v-bind:title="message">
-                    Mueva el mouse sobre mí durante unos segundos
-                    para ver mi título enlazado dinámicamente.
-                </span>
-            </div>
-            <div id="app-3">
-                <span v-if="seen">Ahora me ves</span>
-            </div>
-            <div id="app-4">
-                <ol>
-                    <li v-for="todo in todos">
-                        {{ todo.text }}
-                    </li>
-                </ol>
-            </div>
-            <div id="app-5">
-                <p>{{ message}}</p>
-                <button v-on:click="reverseMessage">Mensaje invertido</button>
-            </div>
-            <div id="app-6">
-                <p>{{ message }}</p>
-                <input v-model="message">
-            </div>
-            <div id="app-7">
-                <ol>
-                    <!-- crea una instancia del componente todo-item -->
-                    <todo-item
-                        v-for="item in groceryList"
-                        v-bind:todo="item"
-                        v-bind:key="item.id">
-                    </todo-item>
-                </ol>
-            </div>
 
-        </div>
+        <script src="js/index.js"></script>
 
 
-    </main>
-
-    <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-                message: 'Hello Vue!'
-            }
-        })
-
-        var app2 = new Vue({
-            el: '#app-2',
-            data: {
-                message: 'Usted cargó esta página el ' + new Date().toLocaleString()
-            }
-        })
-
-        var app3 = new Vue({
-            el: '#app-3',
-            data: {
-                seen: true
-            }
-        })
-
-        var app4 = new Vue({
-            el: '#app-4',
-            data: {
-                todos: [
-                    { text: 'Aprender Javascript con javascript.info' },
-                    { text: 'Aprender Vue' },
-                    { text: 'Construir algo increible' }
-                ]
-            }
-        })
-
-        var app5 = new Vue({
-            el: '#app-5',
-            data: {
-                message: 'Hola Vue.js!'
-            },
-            methods: {
-                reverseMessage: function () {
-                    this.message = this.message.split('').reverse().join('')
-                }
-            }
-        })
-
-        var app6 = new Vue({
-            el: '#app-6',
-            data: {
-                message: 'Hola Vue!'
-            }
-        })
-
-        /* Define un nuevo componente llamado todo-item */
-        Vue.component('todo-item', {
-            props: ['todo'],
-            template: '<li>{{ todo.text }}</li>'
-        })
-
-        var app7 = new Vue({
-            el: '#app-7',
-            data: {
-                groceryList: [
-                    { id: 0, text: 'Vegetales' },
-                    { id: 1, text: 'Queso' },
-                    { id: 2, text: 'Cualquier otra cosa que se supone que los humanos coman' }
-                ]
-            }
-        })
-    </script>
-    <!--
-            <h4>Aunque siendo más exactos, me gusta la tecnología y ya.</h4>
-            <div class="container bg-primary">
-        <nav class="nav ">
-            <a class="nav-link text-white active" href="#">Home</a>
-            <a class="nav-link text-white" href="#">Proyectos</a>
-            <a class="nav-link text-white" href="#">Habilidades</a>
-            <a class="nav-link text-white" href="#">Contacto</a>
-            <a class="nav-link text-white disabled" href="#" tabindex="-1" aria-disabled="true">Blog</a>
-        </nav>
-    </div>
-            
-        -->
 
 </body>
 
